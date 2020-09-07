@@ -25,6 +25,7 @@ body{
     display: flex;
 }
 #music-div{
+    position: relative;
     box-sizing: border-box;
     width: 65%;
     text-align: center;
@@ -43,6 +44,7 @@ body{
     width: 300px;
     margin-bottom: 24px;
     border-radius: 16px;
+    background-color: none;
 }
 .music-cards{
     box-sizing: border-box;
@@ -124,6 +126,7 @@ body{
     margin-top: 0;
 }
 #progress-bar{
+    position: relative;
     max-width: 100%;
     height: 5px;
     background-color: #15124b;
@@ -131,7 +134,48 @@ body{
     cursor: pointer;
     border-radius: 6px;
 }
+#progress-bar:hover #song-duration{
+    display: block;
+}
+#song-duration{
+    display: none;
+    position : absolute;
+    margin: 0;
+    right: 0;
+    top: 10px;
+    opacity: 1;
+    font-size: 16px;
+}
+#player {
+	width: 200px;
+	height: 5px;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    top: 15px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+}
+i.fa-volume-down{
+  position: absolute;
+  left: -30px;
+}
+i.fa-volume-up{
+  position: absolute;
+  right: -30px
+}
+#volume{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute
+}
+
+
 #progress-report{
+    position: relative;
     width: 1%;
     max-width: 100%;
     height: 5px;
@@ -140,6 +184,19 @@ body{
     cursor: pointer;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+}
+#progress-report:hover #song-current-time{
+    display: block;
+}
+#song-current-time{
+    display: none;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 10px;
+    color: blue;
+    opacity: 1 !important;
+    font-size: 16px;
 }
 .shuffle-active{
     font-size: 24px;
